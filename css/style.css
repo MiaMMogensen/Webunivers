@@ -1,0 +1,523 @@
+/* basic css reset */
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; 
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Merriweather-Regular';
+    src: url(/fonts/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(/fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+
+
+
+body {
+    background-color: #F8F7F1;
+}
+
+/* Styling af header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 50px 10px 20px;
+    border-bottom: 2px solid #634233;
+    background-color: #F8F7F1;
+}
+
+/* Styling af logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #634233;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Styling af navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #634233;
+    padding-bottom: 5px;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #634233;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #634233;
+}
+
+/* styling af forside */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #634233;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.811);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Drop down menu */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F8F7F1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #634233;
+    padding: 12px 16px;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* Styling af overskrifter */
+
+h1 {
+    color: #634233;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+h1.midt {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.centrer {
+    text-align: center;
+}
+
+h2 {
+    color: #634233;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: #634233;
+    font-family: 'OpenSans-Bold','Times New Roman', Times, serif;
+    font-size: 25px;
+    margin: 0 100px 50px 100px;
+}
+
+h5 {
+    color: #634233;
+    font-family: 'Merriweather-Regular', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 10px 0 60px 100px;
+}
+
+/* Side opdeling */
+
+.side-opdeling {
+    background-image: url(/img/opdeling.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 100%;
+    margin: 60px 0;
+}
+
+/* Styling af p */
+
+p {
+    font-family: 'OpenSans-Regular', 'Times New Roman', Times, serif;
+    color: #634233;
+}
+
+p.text {
+    margin: 0 100px;
+    padding-top: 2px;
+    line-height: 1.5;
+}
+
+p.text-midten {
+    text-align: center;
+}
+
+
+p.lille-overskrift {
+    font-weight: bold;
+    margin: 0 100px;
+    color: #634233;
+    font-family: 'OpenSans-Bold','Times New Roman', Times, serif;
+}
+
+.link-text:hover {
+    color: #F5D47A;
+    text-decoration: none;
+}
+
+/* Styling af footer */
+
+footer {
+    background-color: #634233;
+    color: #F5D47A;
+    padding: 40px;
+}
+
+footer p {
+    color: #F5D47A;
+}
+
+/* call to action knap */
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #F5D47A;
+    color: #634233;
+    font-size: 18px;
+    border-radius: 15px;
+    font-family: 'OpenSans-Bold','Times New Roman', Times, serif;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin: 10px 0 50px 100px;
+}
+
+.forside-knapper {
+    text-align: center;
+}
+
+.forside-knapper .cta-button {
+    font-size: 25px;
+    padding: 20px 25px;
+}
+
+.book-container .cta-button {
+    margin: 30px 0 0 0;;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container .cta-button{
+    margin: 40px 0 0 0;
+}
+
+#mindre-padding {
+    padding: 15px 25px;
+}
+
+/* stjerner styling */
+
+#stjerner {
+    width: 33%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.små-stjerner {
+    width: 350px;
+    padding-top: 10px;
+}
+
+
+/* liste */
+
+.punktliste {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    font-family: 'OpenSans-Bold','Times New Roman', Times, serif;
+    color: #634233;
+}
+
+/* placering af bøgerne og teksten på siden */
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    padding: 10px;
+    flex-direction: row;
+}
+
+.book-image {
+    width: 450px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.book-image-liste {
+    width: 325px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.book-image-serie {
+    width: 550px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.book-image-serie-stor {
+    margin-bottom: 20px;
+    margin-top: 80px;
+    width: 550px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.book-image-lille {
+    width: 425px;
+    height: auto;
+    margin: 100px 0 10px 200px; 
+}
+
+.book-text {
+    margin: 0 100px;
+    padding: 0 10px 0 0;
+    color: #634233;
+    line-height: 1.5;
+    font-family: 'OpenSans-Regular', 'Times New Roman', Times, serif;
+}
+
+.book-image-omvendt {
+    width: 450px;
+    height: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex: 1;
+}
+
+.book-text-omvendt {
+    padding: 0 0 0 100px;
+    line-height: 1.5;
+    color: #634233;
+    font-family: 'OpenSans-Regular', 'Times New Roman', Times, serif;
+}
+
+.beachread {
+    margin-top: 25px;
+}
+
+.forfatter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0 90px 0;
+}
+
+.bog {
+    width: 300px;
+    margin: 0 40px 0 40px;
+    
+}
+
+.bog img {
+    width: 100%;
+    height: auto;
+}
+
+#housemaid {
+    width: 350px;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.billede {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.overskrift {
+    flex: 1;
+}
+
+.overskrift2 {
+    flex: 1;
+    
+}
+
+.billede img {
+    max-width: 100%;
+    height: auto;
+}
+
+#mellemrum {
+    margin-bottom: 80px;
+}
+
+/* Formular */
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+h4 {
+    font-family: 'OpenSans-Regular', 'Times New Roman', Times, serif;
+    color: #634233;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+textarea {
+    resize: none;
+}
+button {
+    width: 25%;
+    background-color: #F5D47A;
+    color: #000;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover {
+    background-color: #ddd;
+}
+
+input[type="text" i] {
+    padding-block: 15px;
+    padding-inline: 15px;
+    margin: 18px 0;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    .book-container {
+        flex-direction: column;
+    }
+    
+    .book-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+        max-width: 50%;
+        margin: 0;
+    }
+
+    .book-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .book-image-omvendt {
+        padding-right: 0;
+        margin-bottom: 20px;
+        max-width: 50%;
+        margin: 0;
+    }
+
+    .book-text-omvendt {
+        padding-left: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        margin: 0;
+    }
+}
